@@ -16,6 +16,13 @@ All the app is inside in only one controller that consumes Vida's APIs.
 
 The flux is pretty much all procedural that start with a very basic login that, if successful, shows a list of clients in a HTML table. With the `More Details` links, all the client's details can be seen.
 
+###### Build the app
+
+- Run `npm install` or another package manager like `yarn`.
+- Start the server with `node server`.
+- Then run `gulp` to build the code: this will create the `dist` folder.
+- Open `localhost:9010` to see the app working.
+
 ###### Authorization credentials
 
 > User: `codingtest@vida.co.uk`
