@@ -1,0 +1,22 @@
+.headerContainer {
+    display: block;
+    margin: 0 10px;
+}
+
+.groupCategoryHeader {
+    background-color: $darkBlue;
+    border: 1px solid $darkBlue;
+    font-size: $base-font-size + 8;
+    font-weight: $header-font-weight;
+    color: $white;
+    padding: 8px 0;
+    text-align: center;
+}
+
+.subCategoryHeader {
+    border: 1px solid $black;
+    font-size: $base-font-size + 4;
+    font-weight: $header-font-weight;
+    padding: 8px 0;
+    text-align: center;
+}

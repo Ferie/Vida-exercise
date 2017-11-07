@@ -1,0 +1,51 @@
+.vidaClients {
+    display: table;
+    border: 1px solid $black;
+}
+
+.vidaClient {
+    display: table-row;
+    border-top: 1px solid $black;
+
+    &:first-child {
+        border-top: none;
+    }
+
+    &.vidaClientHeader {
+        background-color: $lightGrey;
+        font-weight: $bold;
+    }
+}
+
+.singleClientCell {
+    display: table-cell;
+    border-left: 1px solid $black;
+    padding: em(5) em(10);
+
+    &:first-child {
+        border-left: none;
+    }
+}
+
+.clientDetails {
+    padding: em(4) 0 em(12);
+}
+
+.clientDetailTiltle {
+    color: $lighterBlack;
+}
+
+.clientDetailBlock {
+    display: inline-block;
+    color: $darkBlue;
+    padding: 0 em(24);
+
+    &:first-child {
+        padding-left: 0;
+    }
+}
+
+.clientDetail {
+    font-weight: $bold;
+    color: $black;
+}

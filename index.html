@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Vida Front End Test</title>
+        <link type="text/css" rel="stylesheet" href="dist/css/app.css"/>
+        <script>
+            document.write('<base href="' + document.location.pathname + '">');
+        </script>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="wrapper">
+                <div ng-app="vidaApp" ng-controller="vidaController">
+                    <section class="loginContainer" ng-show="loginProcedure">
+                        <div class="formField">
+                            Email: <input type="text" ng-model="email">
+                        </div>
+                        <div class="formField">
+                            Passsword: <input type="password" ng-model="password">
+                        </div>
+                        <button class="button loginButton" type="submit" ng-click="login()">Submit</button>
+                    </section>
+
+                    <section class="clientsContainer">
+                        <ul class="vidaClients" ng-if="clientsSuccess">
+                            <li class="vidaClient vidaClientHeader">
+                                <span class="singleClientCell">
+                                    Title
+                                </span>
+                                <span class="singleClientCell">
+                                    First name
+                                </span>
+                                <span class="singleClientCell">
+                                    Last name
+                                </span>
+                                <span class="singleClientCell">
+                                    Email
+                                </span>
+                                <span class="singleClientCell">
+                                    Primary phone
+                                </span>
+                                <span class="singleClientCell">
+                                    Link
+                                </span>
+                            </li>
+                            <li class="vidaClient" ng-repeat="client in clients">
+                                <span class="singleClientCell">
+                                    {{ client.attributes['title'] }}
+                                </span>
+                                <span class="singleClientCell">
+                                    {{ client.attributes['first-name'] }}
+                                </span>
+                                <span class="singleClientCell">
+                                    {{ client.attributes['last-name'] }}
+                                </span>
+                                <span class="singleClientCell">
+                                    {{ client.attributes['email'] }}
+                                </span>
+                                <span class="singleClientCell">
+                                    {{ client.attributes['primary-phone'] }}
+                                </span>
+                                <span class="singleClientCell">
+                                    <a class="link" ng-click="clientDetails(client['id'])">More details</a>
+                                </span>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section class="clientDetailsContainer">
+                        <div ng-if="clientDetailsSuccess">
+                            <div class="clientDetailTiltle">
+                                Client full name
+                            </div>
+                            <div class="clientDetails">
+                                <div class="clientDetailBlock">
+                                    <span class="clientDetail">
+                                        {{ details.attributes['title'] }}
+                                    </span>
+                                    <span class="clientDetail">
+                                        {{ details.attributes['first-name'] }}
+                                    </span>
+                                    <span class="clientDetail">
+                                        {{ details.attributes['middle-name'] }}
+                                    </span>
+                                    <span class="clientDetail">
+                                        {{ details.attributes['last-name'] }}
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="clientDetailTiltle">
+                                Preferred name
+                            </div>
+                            <div class="clientDetails">
+                                <div class="clientDetailBlock">
+                                    <span class="clientDetail">
+                                        {{ details.attributes['preferred-name'] || '-' }}
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="clientDetailTiltle">
+                                Gender
+                            </div>
+                            <div class="clientDetails">
+                                <div class="clientDetailBlock">
+                                    <span class="clientDetail">
+                                        {{ details.attributes['gender'] || '-' }}
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="clientDetailTiltle">
+                                Background
+                            </div>
+                            <div class="clientDetails">
+                                <div class="clientDetailBlock">
+                                    Nationality
+                                    <span class="clientDetail">
+                                        {{ details.attributes['nationality'] || '-' }}
+                                    </span>
+                                </div>
+                                <div class="clientDetailBlock">
+                                    Ethnicity
+                                    <span class="clientDetail">
+                                        {{ details.attributes['ethnicity'] || '-' }}
+                                    </span>
+                                </div>
+                                <div class="clientDetailBlock">
+                                    Religion
+                                    <span class="clientDetail">
+                                        {{ details.attributes['religion'] || '-' }}
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="clientDetailTiltle">
+                                Date of birth
+                            </div>
+                            <div class="clientDetails">
+                                <div class="clientDetailBlock">
+                                    <span class="clientDetail">
+                                        {{ details.attributes['date-of-birth'] || '-' }}
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="clientDetailTiltle">
+                                Contact details
+                            </div>
+                            <div class="clientDetails">
+                                <div class="clientDetailBlock">
+                                    Email
+                                    <span class="clientDetail">
+                                        {{ details.attributes['email'] || '-' }}
+                                    </span>
+                                </div>
+                                <div class="clientDetailBlock">
+                                    Primary phone
+                                    <span class="clientDetail">
+                                        {{ details.attributes['primary-phone'] || '-' }}
+                                    </span>
+                                </div>
+                                <div class="clientDetailBlock">
+                                    Secondary phone
+                                    <span class="clientDetail">
+                                        {{ details.attributes['secondary-phone'] || '-' }}
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="clientDetailTiltle">
+                                Marital status
+                            </div>
+                            <div class="clientDetails">
+                                <div class="clientDetailBlock">
+                                    <span class="clientDetail">
+                                        {{ details.attributes['marital-status'] || '-' }}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div class="spinner" ng-show="loading">
+                        <img src="images/loading.gif" class="loader" alt="Loading...">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="dist/js/app.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,182 @@
+$field-font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', sans-serif;
+$field-font-weight: 300;
+$field-colour: $lighterBlack;
+
+.formField {
+    padding: em(8) 0;
+}
+
+%focusStyling {
+	border-color: $greyDdd;
+	color: $field-colour;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+select.formField,
+textarea.formField {
+	/*@include box-sizing;*/
+	display: inline-block;
+	background-color: $white;
+	border: 2px solid $greyDdd;
+	border-radius: 0;
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+	font-size: $base-font-size;
+	color: scale-color($field-colour, $lightness: 50%);
+	outline: none;
+	padding: em(8) em(12);
+	width: 100%;
+}
+
+input[type="text"].inline,
+input[type="tel"].inline,
+input[type="email"].inline,
+input[type="password"].inline,
+input[type="search"].inline,
+input[type="number"].inline,
+input[type="tel"].inline,
+select.formField.inline,
+textarea.formField.inline {
+	width: auto;
+}
+
+select {
+	//background-color:scale-color($field-colour, $lightness: 95%);
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMTJweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIzcHgiIHZpZXdCb3g9IjAgMCA2IDMiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDYgMyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gcG9pbnRzPSI1Ljk5MiwwIDIuOTkyLDMgLTAuMDA4LDAgIi8+PC9zdmc+);
+	background-position: 99% center;
+	background-repeat: no-repeat;
+    padding: em(7) em(24) em(7) em(12);
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="search"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+select.formField:focus,
+textarea.formField:focus {
+	@extend %focusStyling;
+	background-color: $white;
+}
+/*
+input.formField.is-success,
+select.formField.is-success,
+textarea.formField.is-success {
+	border-left-width: 4px;
+	border-left-color: scale-color($field-success-colour, $lightness: -20%);
+	color: scale-color($field-success-colour, $lightness: -20%);
+	//background: scale-color($field-success-colour, $lightness: 90%);
+}
+
+input[type="text"].is-success:focus,
+input[type="tel"].is-success:focus,
+input[type="email"].is-success:focus,
+input[type="password"].is-success:focus,
+input[type="number"].is-success:focus,
+input[type="tel"].is-success:focus,
+select.formField.is-success:focus,
+textarea.formField.is-success:focus {
+	border-left-color: $field-success-colour;
+	color: $field-success-colour;
+}
+
+input.formField.is-warning,
+select.formField.is-warning,
+textarea.formField.is-warning {
+	border-left-width: 4px;
+	border-left-color: scale-color($field-warning-colour, $lightness: -20%);
+	color: scale-color($field-warning-colour, $lightness: -20%);
+	//background: scale-color($field-warning-colour, $lightness: 90%);
+}
+
+input[type="text"].is-warning:focus,
+input[type="tel"].is-warning:focus,
+input[type="email"].is-warning:focus,
+input[type="password"].is-warning:focus,
+input[type="search"].is-warning:focus,
+input[type="number"].is-warning:focus,
+input[type="tel"].is-warning:focus,
+select.formField.is-warning:focus,
+textarea.formField.is-warning:focus {
+	border-left-color: $field-warning-colour;
+	color: $field-warning-colour;
+}
+
+input.formField.is-invalid,
+select.formField.is-invalid,
+textarea.formField.is-invalid {
+	border-left-width: 4px;
+	border-left-color: scale-color($field-error-colour, $lightness: -20%);
+	color: scale-color($field-error-colour, $lightness: -20%);
+	//background: scale-color($field-error-colour, $lightness: 90%);
+}
+
+input[type="text"].is-invalid:focus,
+input[type="tel"].is-invalid:focus,
+input[type="email"].is-invalid:focus,
+input[type="password"].is-invalid:focus,
+input[type="search"].is-invalid:focus,
+input[type="number"].is-invalid:focus,
+input[type="tel"].is-invalid:focus,
+select.formField.is-invalid:focus,
+textarea.formField.is-invalid:focus {
+	border-left-color: $field-error-colour;
+	color: $field-error-colour;
+}
+
+select.formField.is-invalid > option {
+	color: $field-error-colour;
+}
+*/
+::-webkit-input-placeholder {
+	color: $greyBC;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+	color: $greyBC;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+	color: $greyBC;
+}
+
+:-ms-input-placeholder {
+	color: $greyBC;
+}
+
+/*** Custom arrow on HTML tag select only for IE8, IE9 ***/
+/*** display none for this following element is for all the other browsers ***/
+.selectTagWrapper:before {
+	display: none;
+}
+
+.lt-ie9 .selectTagWrapper,
+.ie9 .selectTagWrapper {
+	position: relative;
+	border: 1px solid $greyDdd;
+	overflow: hidden;
+	width: 100%;
+}
+
+.lt-ie9 .selectTagWrapper:before,
+.ie9 .selectTagWrapper:before {
+	display: block;
+	position: absolute;
+	top: 40%;
+	left: 95%;
+	font-size: em(5);
+	width: 100%;
+}
+
+.lt-ie9 .selectTagWrapper > select,
+.ie9 .selectTagWrapper > select {
+	border: none;
+	width: 125%;
+}
