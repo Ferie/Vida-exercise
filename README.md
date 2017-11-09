@@ -1,6 +1,6 @@
 # Vida front end exercise
 
-#### A brief story of this web application
+### A brief story of this web application
 
 This is the very first web app that I had ever did in AngularJS.
 
@@ -12,7 +12,7 @@ It was later reviewed with the CTO, whom I explained the decisions that I made i
 
 *This exercise was the exercise that gave me the job and the opportunity to improve further my knowledge with AngularJS!*
 
-#### The story continues because I got the job!
+### The story continues because I got the job!
 
 In this company I am actually building from scratch a new platform using more reasonable AngularJS stardards that are commonly used around.
 
