@@ -4,7 +4,7 @@
 
 This is the very first web app that I had ever did in AngularJS.
 
-It was done during my **7 and a half long interview** with my actual company Vida, the *9th March 2017*. It took me about 4 hours and a half to complete it. I did it that day when they let me do it at their offices after a quick introduction of the company by the CTO and a brief of my previous job experiencies.
+It was done during my **7 and a half long interview** with a company I worked with, the *9th March 2017*. It took me about 4 hours and a half to complete it. I did it that day when they let me do it at their offices after a quick introduction of the company by the CTO and a brief of my previous job experiencies.
 
 Basically during that hours I studied quickly the very basic AngularJS statements to complete the application, that for these resons it is not very standardized.
 
