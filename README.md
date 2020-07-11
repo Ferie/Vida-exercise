@@ -10,13 +10,13 @@ Basically during that hours I studied quickly the very basic AngularJS statement
 
 It was later reviewed with the CTO, whom I explained the decisions that I made in terms of coding style and layouts. 
 
-*This exercise was the exercise that gave me the job and the opportunity to improve further my knowledge with AngularJS!*
-
 ### The story continues because I got the job!
 
-In this company I am actually building from scratch a new platform using more reasonable AngularJS stardards that are commonly used around.
+*This exercise was the exercise that gave me the job and the opportunity to improve further my knowledge with AngularJS!*
 
-Indeed in this exercise **there is no coding style neither a folder structure neither other AngularJS common standards** (remember that this was my first ever single page app done using Angular).
+In this company I had the opportunity of building from scratch a new platform using more reasonable AngularJS stardards that are commonly used.
+
+Indeed, in this exercise, **there is no coding style guide, neither a folder structure and neither other AngularJS common standards** (remember that this was my first ever single page app done using Angular).
 
 All the functionalities for this app are inside one controller that consumes Vida's APIs.
 
@@ -25,11 +25,13 @@ The flux is pretty much all procedural that start with a very basic login that, 
 ###### Build the app to make it work
 
 - Run `npm install` or another package manager like `yarn`.
-- Start the server with `node server`.
 - Then run `gulp` to build the code: this will create the `dist` folder.
-- Open `localhost:9010` to see the app working.
+- Start the server with `node server`.
+- Open `localhost:9010` to see the app running.
 
 ###### Authorization credentials
 
 > User: `codingtest@vida.co.uk`
 Password: `CodingExercise`
+
+**Note: Vida APIs are no more working so the credetials are now wrong. As I left the company a couple of years ago, I cannot provide any new ones.**
