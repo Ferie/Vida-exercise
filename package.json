@@ -1,13 +1,21 @@
 {
-    "name": "vida",
+    "name": "vida-fe-test",
     "version": "1.0.0",
-    "description": "Test exercise for Vida interview",
-    "main": "index.php",
+    "description": "Test exercise I made for Vida during my interview",
     "scripts": {
         "start": "node server"
     },
     "author": "Riccardo Andreatta",
     "license": "MIT",
+    "engines": {
+        "node": "6.17.1",
+        "npm": "3.10.10"
+    },
+    "dependencies": {
+        "del": "^2.2.2",
+        "dotenv": "^4.0.0",
+        "express": "^4.15.5"
+    },
     "devDependencies": {
         "gulp": "^3.9.1",
         "gulp-concat": "^2.6.1",
@@ -20,10 +28,5 @@
         "jshint-stylish": "^2.2.1",
         "mockserver-grunt": "^1.0.42",
         "uglify-js": "^2.7.5"
-    },
-    "dependencies": {
-        "del": "^2.2.2",
-        "dotenv": "^4.0.0",
-        "express": "^4.15.5"
     }
 }
