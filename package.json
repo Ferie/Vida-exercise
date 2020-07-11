@@ -4,7 +4,7 @@
     "description": "Test exercise for Vida interview",
     "main": "index.php",
     "scripts": {
-        "test": ""
+        "start": "node server"
     },
     "author": "Riccardo Andreatta",
     "license": "MIT",
