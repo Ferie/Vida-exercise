@@ -15,8 +15,8 @@ localhost.get(/.*/, function (req, res) {
     res.sendFile(__dirname + mainFile);
 });
 
-localhost.listen(localhostPort, function () {
-    console.log("Start surfing at localhost:%d", localhostPort);
+localhost.listen(process.env.PORT || localhostPort, function () {
+    console.log("Start surfing at localhost:%d", (process.env.PORT || localhostPort));
 });
 
 localhost.post('api/sessions', function (req, res) {
